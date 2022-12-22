@@ -1,1 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
+@import './styles/partials/fonts', './styles/partials/colors';
+@import './styles/partials/reset';
+@import './styles/themes/tailwinds';
+
+* {
+  font-family: 'Poppins', sans-serif;
+  font-weight: $normal;
+  color: $text-color-default;
+  background-color: $body-bg;
+}
