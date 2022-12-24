@@ -1,1 +1,20 @@
-<nav></nav>
+<nav class="bg-white navbar container">
+  <ul class="navbar__items">
+    <li class="navbar__items--title">Mauricio Martinez</li>
+    <li>Home</li>
+    <li>About</li>
+    <li>Skills</li>
+    <li>Projects</li>
+    <li>Contact</li>
+    <li
+      class="theme__toggle"
+      (click)="changeTheme()">
+      <fa-icon
+        [icon]="faMoon"
+        *ngIf="theme === 'ligth'; else sunIcon"></fa-icon>
+      <ng-template #sunIcon>
+        <fa-icon [icon]="faSun"></fa-icon>
+      </ng-template>
+    </li>
+  </ul>
+</nav>

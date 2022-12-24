@@ -1,0 +1,23 @@
+$themes: (
+  dark: (
+    'bg-color': #333,
+    'text-color': #f6f6f6
+  ),
+  light: (
+    'bg-color': #f5f5f5,
+    'text-color': #333
+  )
+);
+
+@each $theme-name, $properties in $themes {
+  .app.#{$theme-name} {
+    @each $name, $property in $properties {
+      --#{$name}: #{$property};
+
+      @if ($name == 'primary') {
+        --#{$name}-dark: #{darken($property, 10%)};
+        --#{$name}-darker: #{darken($property, 20%)};
+      }
+    }
+  }
+}

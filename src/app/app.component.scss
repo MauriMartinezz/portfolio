@@ -1,5 +1,8 @@
 @import '../styles.scss';
 
-p {
-  color: $accent-color;
+.app {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  height: 100%;
+  transition: 500ms;
 }

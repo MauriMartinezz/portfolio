@@ -1,10 +1,10 @@
-@import './styles/partials/fonts', './styles/partials/colors';
-@import './styles/partials/reset';
-@import './styles/themes/tailwinds';
+@import './styles/index.scss';
 
-* {
+html {
+  font-size: 62.5%;
+}
+body {
   font-family: 'Poppins', sans-serif;
   font-weight: $normal;
-  color: $text-color-default;
-  background-color: $body-bg;
+  font-size: $m;
 }

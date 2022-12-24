@@ -1,0 +1,26 @@
+@import '../../../styles/index.scss';
+.navbar {
+  margin: 0 auto;
+  background-color: transparent;
+  .navbar__items {
+    @include centerFlex;
+    gap: 5rem;
+    height: 10rem;
+    font-size: $l;
+    cursor: pointer;
+    :hover:not(:first-child) {
+      transform: scale(1.25);
+    }
+    .navbar__items--title {
+      font-size: $title;
+      font-weight: $semi-bold;
+      flex-grow: 1;
+    }
+  }
+}
+
+.theme__toggle {
+  fa-icon {
+    font-size: $title;
+  }
+}
