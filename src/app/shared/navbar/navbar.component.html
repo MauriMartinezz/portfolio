@@ -10,10 +10,10 @@
       class="theme__toggle"
       (click)="changeTheme()">
       <fa-icon
-        [icon]="faMoon"
-        *ngIf="theme === 'ligth'; else sunIcon"></fa-icon>
-      <ng-template #sunIcon>
-        <fa-icon [icon]="faSun"></fa-icon>
+        [icon]="faSun"
+        *ngIf="theme === 'dark'; else moonIcon"></fa-icon>
+      <ng-template #moonIcon>
+        <fa-icon [icon]="faMoon"></fa-icon>
       </ng-template>
     </li>
   </ul>

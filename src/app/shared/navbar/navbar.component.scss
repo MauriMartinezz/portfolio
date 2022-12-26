@@ -4,12 +4,13 @@
   background-color: transparent;
   .navbar__items {
     @include centerFlex;
-    gap: 5rem;
-    height: 10rem;
+    gap: 3rem;
     font-size: $l;
+
+    height: 10rem;
     cursor: pointer;
-    :hover:not(:first-child) {
-      transform: scale(1.25);
+    :hover:not(:first-child):not(:last-child) {
+      transform: scale(1.05);
     }
     .navbar__items--title {
       font-size: $title;
@@ -17,10 +18,9 @@
       flex-grow: 1;
     }
   }
-}
-
-.theme__toggle {
-  fa-icon {
-    font-size: $title;
+  .theme__toggle {
+    fa-icon {
+      color: var(--icon-theme-color);
+    }
   }
 }

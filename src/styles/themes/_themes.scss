@@ -1,14 +1,27 @@
 $themes: (
-  dark: (
-    'bg-color': #333,
-    'text-color': #f6f6f6
-  ),
-  light: (
+  'light': (
     'bg-color': #f5f5f5,
-    'text-color': #333
+    'text-color': #333,
+    'primary': #460e7b,
+    'secondary': #43bccd,
+    'border': #d8d8d8,
+    'border-focus': #bbbbbb,
+    'subtle': #979797,
+    'muted': #535353,
+    'icon-theme-color': #333
+  ),
+  'dark': (
+    'bg-color': #333,
+    'text-color': #f5f5f5,
+    'primary': #88d498,
+    'secondary': #db5375,
+    'border': #616161,
+    'border-focus': #757575,
+    'subtle': #9e9e9e,
+    'muted': #bdbdbd,
+    'icon-theme-color': #f3b12e
   )
 );
-
 @each $theme-name, $properties in $themes {
   .app.#{$theme-name} {
     @each $name, $property in $properties {

@@ -11,10 +11,10 @@ export class NavbarComponent {
   public faMoon = faMoon;
   public faSun = faSun;
 
-  public theme: string = 'ligth';
+  public theme: string = 'light' || 'dark';
 
   changeTheme() {
-    this.theme = this.theme == 'ligth' ? 'dark' : 'ligth';
+    this.theme = this.theme == 'light' ? 'dark' : 'light';
     this.themeChanged.emit(this.theme);
   }
 }

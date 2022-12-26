@@ -1,4 +1,4 @@
-import { Component, ElementRef, Renderer2, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,19 +6,9 @@ import { Component, ElementRef, Renderer2, ViewChild } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  @ViewChild('app') myApp!: ElementRef;
   title = 'portfolio';
-
-  constructor(private renderer2: Renderer2) {}
+  theme: string = 'light' || 'dark';
   setTheme(theme: string) {
-    const app = this.myApp.nativeElement;
-
-    if (theme == 'ligth') {
-      this.renderer2.removeClass(app, 'ligth');
-      this.renderer2.addClass(app, 'dark');
-    } else {
-      this.renderer2.removeClass(app, 'dark');
-      this.renderer2.addClass(app, 'ligth');
-    }
+    this.theme = theme;
   }
 }
