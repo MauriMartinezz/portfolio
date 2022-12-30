@@ -1,0 +1,28 @@
+@import '../../../../styles/index.scss';
+.section__title {
+  .title--desc {
+    font-size: 7rem;
+    text-align: center;
+    padding-bottom: 3rem;
+    background-color: var(--bg-color);
+    font-weight: $bold;
+  }
+}
+.skills__section {
+  background-color: var(--text-color);
+  color: var(--bg-color);
+  padding: 2rem;
+
+  .skills__icons {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    font-size: 5rem;
+    fa-icon {
+      transition: transform 0.3s;
+    }
+    fa-icon:hover {
+      transform: scale(1.2);
+    }
+  }
+}

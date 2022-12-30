@@ -1,0 +1,44 @@
+@import '../../../../styles/index.scss';
+
+.intro {
+  height: min(calc(100vh - 10rem), 100%);
+  @include centerFlex;
+  margin: 0 auto;
+  flex-direction: column;
+  .intro__text {
+    h2 {
+      font-size: 10rem;
+      font-weight: bolder;
+    }
+    p {
+      font-size: 5rem;
+      margin-top: 3rem;
+      white-space: nowrap;
+    }
+  }
+
+  .intro__social {
+    font-size: 5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 15rem;
+    margin-top: 5rem;
+    fa-icon {
+      transition: transform 0.2s ease-in-out;
+      cursor: pointer;
+    }
+    fa-icon:hover {
+      transform: scale(1.25);
+    }
+    .linkedin:hover {
+      color: #0a66c2;
+    }
+    .mail:hover {
+      color: #f3b12e;
+    }
+    .download:hover {
+      color: #319831;
+    }
+  }
+}
