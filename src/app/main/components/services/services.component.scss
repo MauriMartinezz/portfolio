@@ -1,0 +1,46 @@
+@import '../../../../styles/index.scss';
+
+.services {
+  font-size: 7rem;
+  text-align: center;
+  padding-bottom: 3rem;
+  background-color: var(--bg-color);
+  font-weight: $bold;
+  padding-bottom: 20rem;
+  .services--title {
+    margin-bottom: 10rem;
+  }
+  .card-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    .card {
+      text-align: start;
+      width: 30%;
+      background-color: #292929;
+      border-radius: 3rem;
+      border: 3px solid $primary;
+      padding: 4rem;
+      aspect-ratio: 16/9;
+      transition: all 0.3s ease-in-out;
+      .card--header {
+        font-size: 3rem;
+        .header--icon {
+          font-size: 4rem;
+        }
+      }
+      .card--desc {
+        font-size: 2rem;
+        font-weight: $thin;
+        margin-top: 1.5rem;
+      }
+
+      &:hover {
+        translate: -5px -10px;
+        border-radius: 0px;
+        box-shadow: 20px 20px 0px rgba(#413d3d, 0.9);
+      }
+    }
+  }
+}

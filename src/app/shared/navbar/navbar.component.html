@@ -1,10 +1,20 @@
-<nav class="bg-white navbar container">
-  <ul class="navbar__items">
-    <li class="navbar__items--title">Mauricio Martinez</li>
-    <li>About</li>
-    <li>Skills</li>
-    <li>Projects</li>
+<nav
+  class="navbar"
+  [class.navbarFixed]="navbarFixed">
+  <ul class="navbar__items container">
+    <li class="navbar__items--title">
+      <a href="#home"> Mauricio Martinez </a>
+    </li>
+    <li>
+      <a href="#services">Services</a>
+    </li>
+    <li>
+      <a href="#skills">Skills</a>
+    </li>
     <li>Contact</li>
+    <li>
+      <a href="#about">About</a>
+    </li>
     <li
       class="theme__toggle"
       (click)="changeTheme()">

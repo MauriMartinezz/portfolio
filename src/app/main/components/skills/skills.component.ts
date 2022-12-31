@@ -20,7 +20,24 @@ import { faDatabase } from '@fortawesome/free-solid-svg-icons';
   selector: 'app-skills',
   standalone: true,
   imports: [CommonModule, FontAwesomeModule],
-  templateUrl: './skills.component.html',
+  template: `
+    <section id="skills">
+      <div class="section__title">
+        <h3 class="title--desc">SKILLS</h3>
+      </div>
+      <div class="skills__section">
+        <div class="skills__icons">
+          <a
+            *ngFor="let icon of icons"
+            class="skills__icons"
+            [href]="icon.site"
+            target="_blank">
+            <fa-icon [icon]="icon.icon"></fa-icon>
+          </a>
+        </div>
+      </div>
+    </section>
+  `,
   styleUrls: ['./skills.component.scss']
 })
 export class SkillsComponent {

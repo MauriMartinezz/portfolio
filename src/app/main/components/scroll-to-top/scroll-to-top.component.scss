@@ -1,0 +1,17 @@
+.scroll-to-top {
+  position: fixed;
+  font-size: 7rem;
+  bottom: 2rem;
+  right: 4rem;
+  animation: appear 0.4s;
+  cursor: pointer;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}

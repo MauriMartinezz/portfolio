@@ -1,10 +1,11 @@
 @import '../../../../styles/index.scss';
 
 .intro {
-  height: min(calc(100vh - 10rem), 100%);
+  height: min(100vh, 100%);
   @include centerFlex;
   margin: 0 auto;
   flex-direction: column;
+  gap: 5rem;
   .intro__text {
     h2 {
       font-size: 10rem;
@@ -14,6 +15,7 @@
       font-size: 5rem;
       margin-top: 3rem;
       white-space: nowrap;
+      font-weight: $thin;
     }
   }
 
@@ -23,12 +25,12 @@
     display: flex;
     justify-content: center;
     gap: 15rem;
-    margin-top: 5rem;
-    fa-icon {
+    margin-bottom: 10rem;
+    .social__icon {
       transition: transform 0.2s ease-in-out;
       cursor: pointer;
     }
-    fa-icon:hover {
+    .social__icon:hover {
       transform: scale(1.25);
     }
     .linkedin:hover {

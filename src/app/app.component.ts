@@ -1,8 +1,21 @@
 import { Component } from '@angular/core';
 
+// <div
+//   class="app dark"
+//   #app>
+//   <app-navbar (themeChanged)="setTheme($event)"></app-navbar>
+//   <router-outlet></router-outlet>
+// </div>
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  template: `
+    <div
+      class="app dark"
+      #app>
+      <app-navbar (themeChanged)="setTheme($event)"></app-navbar>
+      <router-outlet></router-outlet>
+    </div>
+  `,
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
