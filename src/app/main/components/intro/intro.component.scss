@@ -17,6 +17,9 @@
       white-space: nowrap;
       font-weight: $thin;
     }
+    .name {
+      color: $primary;
+    }
   }
 
   .intro__social {
@@ -42,5 +45,25 @@
     .download:hover {
       color: #319831;
     }
+  }
+  .icon__go-down {
+    font-size: 8rem;
+    animation: bounce 2s infinite;
+    color: $primary;
+    position: absolute;
+    bottom: 20rem;
+    z-index: 1;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(20px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(20px);
   }
 }

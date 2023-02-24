@@ -21,7 +21,7 @@ export class ScrollToTopComponent {
     } else if (
       (this.windowScrolled && window.scrollY) ||
       document.documentElement.scrollTop ||
-      document.body.scrollTop < 10
+      document.body.scrollTop < 100
     ) {
       this.windowScrolled = false;
     }
