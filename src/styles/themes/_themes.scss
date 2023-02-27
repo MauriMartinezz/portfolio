@@ -22,8 +22,8 @@ $themes: (
     'icon-theme-color': #f3b12e
   )
 );
-@each $theme-name, $properties in $themes {
-  .app.#{$theme-name} {
+@each $theme, $properties in $themes {
+  .app.#{$theme} {
     @each $name, $property in $properties {
       --#{$name}: #{$property};
 

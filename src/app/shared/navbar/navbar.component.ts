@@ -1,5 +1,6 @@
 import { Component, EventEmitter, HostListener, Output } from '@angular/core';
 import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
+import { theme } from '../models/themes.interface';
 
 @Component({
   selector: 'app-navbar',
@@ -7,14 +8,14 @@ import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
-  @Output() themeChanged = new EventEmitter<string>();
+  @Output() themeChanged = new EventEmitter<theme>();
   public faMoon = faMoon;
   public faSun = faSun;
-  public theme: string = 'light' || 'dark';
+  public theme: theme = 'light';
   public navbarFixed = false;
 
   changeTheme() {
-    this.theme = this.theme == 'light' ? 'dark' : 'light';
+    this.theme = this.theme === 'light' ? 'dark' : 'light';
     this.themeChanged.emit(this.theme);
   }
   @HostListener('document:scroll')
@@ -24,7 +25,6 @@ export class NavbarComponent {
       document.documentElement.scrollTop > 50
     ) {
       this.navbarFixed = true;
-      console.log(document.body.scrollTop);
     } else {
       this.navbarFixed = false;
     }

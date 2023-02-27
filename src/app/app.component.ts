@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { theme } from './shared/models/themes.interface';
 
 // <div
 //   class="app dark"
@@ -10,7 +11,8 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   template: `
     <div
-      class="app dark"
+      class="app"
+      [ngClass]="theme"
       #app>
       <app-navbar (themeChanged)="setTheme($event)"></app-navbar>
       <router-outlet></router-outlet>
@@ -20,8 +22,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'portfolio';
-  theme: string = 'light' || 'dark';
-  setTheme(theme: string) {
+  theme: theme = 'light' || 'dark';
+  setTheme(theme: theme) {
     this.theme = theme;
+    console.log(this.theme);
   }
 }
