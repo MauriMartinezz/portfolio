@@ -18,7 +18,7 @@
       font-weight: $thin;
     }
     .name {
-      color: $primary;
+      color: var(--primary);
     }
   }
 
@@ -49,7 +49,7 @@
   .icon__go-down {
     font-size: 8rem;
     animation: bounce 2s infinite;
-    color: $primary;
+    color: var(--primary);
     position: absolute;
     bottom: 20rem;
     z-index: 1;

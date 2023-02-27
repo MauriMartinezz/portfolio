@@ -16,14 +16,13 @@
     justify-content: space-around;
     margin: 0 auto;
     .card {
+      display: block;
       text-align: start;
       width: 30%;
-      background-color: #292929;
       border-radius: 3rem;
-      border: 3px solid $primary;
+      border: 3px solid var(--primary);
       padding: 4rem;
-      aspect-ratio: 16/9;
-      transition: all 0.3s ease-in-out;
+      transition: all 0.3s, color 0s;
       .card--header {
         font-size: 3rem;
         .header--icon {
@@ -39,7 +38,7 @@
       &:hover {
         translate: -5px -10px;
         border-radius: 0px;
-        box-shadow: 20px 20px 0px rgba(#413d3d, 0.9);
+        box-shadow: 20px 20px 0px var(--primary);
       }
     }
   }

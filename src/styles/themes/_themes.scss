@@ -2,9 +2,9 @@ $themes: (
   'light': (
     'bg-color': #f5f5f5,
     'text-color': #333,
-    'primary': #460e7b,
-    'secondary': #43bccd,
-    'border': #d8d8d8,
+    'bg-contrast': #dcdcdc,
+    'primary': #43bccd,
+    'secondary': #fcc767,
     'border-focus': #bbbbbb,
     'subtle': #979797,
     'muted': #535353,
@@ -13,7 +13,8 @@ $themes: (
   'dark': (
     'bg-color': #1f1f1f,
     'text-color': #f6f6f6,
-    'primary': #88d498,
+    'bg-contrast': #292929,
+    'primary': #fa8d70,
     'secondary': #db5375,
     'border': #616161,
     'border-focus': #757575,
